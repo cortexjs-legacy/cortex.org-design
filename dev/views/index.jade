@@ -1,0 +1,84 @@
+mixin user()
+	section.user
+		img.avatar(src="./build/img/avatar.jpg")
+		.username substack
+		.packages 400 packages
+
+mixin user-info()
+	section.user-info
+		.head USER INFORMATION
+		.conent
+			.item
+				.title FULL NAME
+				.content James Halliday
+			.item
+				.title FULL NAME
+				.content James Halliday
+			.item
+				.title FULL NAME
+				.content James Halliday
+			.item
+				.title FULL NAME
+				.content James Halliday
+
+mixin package-info()
+	section.package-info
+		img.avatar(src="./build/img/avatar.jpg")
+		.content
+			.top
+				.package-name commonjs-walker
+				.version 2.3.0
+			.bottom
+				.description blablablablablablablablablablablablabla
+
+mixin package-stat()
+	section.package-stat
+		.top
+			img.avatar(src="./build/img/avatar.jpg")
+			.txt spud updated 4 days ago
+		.bottom
+			.item 299
+			.item Repo
+			.item Issues
+
+mixin maintainers()
+	section.maintainers
+		.head MAINTAINERS
+		.content
+			img.avatar(src="./build/img/avatar.jpg")
+			img.avatar(src="./build/img/avatar.jpg")
+			img.avatar(src="./build/img/avatar.jpg")
+			img.avatar(src="./build/img/avatar.jpg")
+
+mixin command(title,content)
+	section.command
+		.title #{title}
+		.content 
+			.txt #{content}
+
+extends layout/default.jade
+
+block head  
+	title cortex
+	+css("./build/css/cortex.css")
+
+block content  
+	+user()
+	+user-info()
+	+package-info()
+	+package-stat()
+	+maintainers()
+	+command("clone","git clone blablabla")
+	+command("install","npm install commonjs-walker --save")
+	section.badge-red commonjs-walker
+	section.badge-green commonjs-walker
+	section.readme
+		.title README
+		.content hahaha
+	section.tabs
+		.tab.active DEPENDENCIES
+		.tab DEV
+		.tab DEPENDENTS
+
+
+
