@@ -1,0 +1,46 @@
+include ./mixin/component
+
+extends layout/default.jade
+
+block head  
+	title cortex
+	+css("./css/cortex.css")
+
+block content  
+	+user()
+	+user-info()
+	+package-info()
+	+package-stat()
+	+maintainers()
+	+command("clone","git clone blablabla")
+	+command("install","npm install commonjs-walker --save")
+	section.badge-red commonjs-walker
+	section.badge-green commonjs-walker
+	section.readme
+		.title README
+		.content hahaha
+	section.tabs
+		.tab.active DEPENDENCIES
+		.tab DEV
+		.tab DEPENDENTS
+	table
+		tr
+			th FULL NAME
+			th REQUIREMENT
+			th LATEST
+		tr
+			td async
+			td ~0.2.9
+			td 1.2.0
+		tr
+			td async
+			td ~0.2.9
+			td 1.2.0
+		tr
+			td async
+			td ~0.2.9
+			td 1.2.0
+
+
+
+

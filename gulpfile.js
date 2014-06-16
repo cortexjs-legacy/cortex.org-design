@@ -14,13 +14,14 @@ gulp.task('stylus', function() {
     };
 	gulp.src(["./dev/css/**/*.styl"])
 		.pipe(stylus(stylusOptions))
+		.on('error',console.log)
 		.pipe(gulp.dest('./build/css'));
 });
 
 gulp.task('jade', function() {
 	gulp.src(["./dev/views/*.jade"])
 		.pipe(jade())
-		.pipe(gulp.dest("./"));
+		.pipe(gulp.dest("./build/"));
 
 });
 

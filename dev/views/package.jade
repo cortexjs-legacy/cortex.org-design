@@ -1,0 +1,30 @@
+include ./mixin/component
+
+extends layout/default.jade
+
+block head  
+	title cortex
+	+css("./css/package.css")
+
+block content  
+	+nav()
+	section.container
+		.top-area
+			span.info 10 pacakges about
+		.detail
+			.row
+				+package-stat
+				+command("clone","git clone blablabla")
+				+command("install","npm install commonjs-walker --save")
+			.row
+				section.tabs
+					.tab.active DEPENDENCIES
+					.tab DEV
+					.tab DEPENDENTS
+				+maintainers()
+			.row
+				section.readme
+					.title README
+					.content hahaha
+
+

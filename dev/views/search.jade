@@ -1,0 +1,24 @@
+include ./mixin/component
+
+extends layout/default.jade
+
+block head  
+	title cortex
+	+css("./css/search.css")
+
+block content  
+	+nav()
+	section.container
+		.top-area
+			span.info 10 pacakges about
+				b  COMMONS
+		.packages
+			+package-info()
+			+package-info()
+			+package-info()
+			+package-info()
+			+package-info()
+			+package-info()
+
+
+

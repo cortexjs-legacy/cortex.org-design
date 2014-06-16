@@ -1,0 +1,70 @@
+mixin user()
+	section.user
+		img.avatar(src="./img/avatar.jpg")
+		.username substack
+		.packages 400 packages
+
+mixin user-info()
+	section.user-info
+		.head USER INFORMATION
+		.body
+			table
+				tr
+					td FULL NAME
+					td James Halliday
+				tr
+					td FULL NAME
+					td James Halliday
+				tr
+					td FULL NAME
+					td James Halliday
+
+mixin package-info()
+	a.package-info
+		img.avatar(src="./img/avatar.jpg")
+		.content
+			.top
+				.package-name commonjs-walker
+				.version 2.3.0
+			.bottom
+				p.description bla bla bla blabl abl ablab labla blabl 
+				.stat
+
+mixin package-stat()
+	section.package-stat
+		.top
+			img.avatar(src="./img/avatar.jpg")
+			.txt spud updated 4 days ago
+		.bottom
+			.item 299
+			.item Repo
+			.item Issues
+
+mixin maintainers()
+	section.maintainers
+		.head MAINTAINERS
+		.body
+			img.avatar(src="./img/avatar.jpg")
+			img.avatar(src="./img/avatar.jpg")
+			img.avatar(src="./img/avatar.jpg")
+			img.avatar(src="./img/avatar.jpg")
+
+mixin command(title,content)
+	section.command
+		.title #{title}
+		.content 
+			.txt #{content}
+
+mixin nav()
+	.nav
+		a.home
+		.panel
+			.search-box
+				input(type="text")
+				i.icon-close
+			.util-panel
+				a.doc
+				a.get-started GET STARTED
+				a.user.login
+					img.avatar(src="./img/avatar.jpg")
+
