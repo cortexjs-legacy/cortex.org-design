@@ -1,11 +1,11 @@
 mixin user()
-	section.user
+	section.user.card
 		img.avatar(src="./img/avatar.jpg")
 		.username substack
 		.packages 400 packages
 
 mixin user-info()
-	section.user-info
+	section.user-info.card
 		.head USER INFORMATION
 		.body
 			table
@@ -20,7 +20,7 @@ mixin user-info()
 					td James Halliday
 
 mixin package-info()
-	a.package-info
+	a.package-info.card
 		img.avatar(src="./img/avatar.jpg")
 		.content
 			.top
@@ -31,9 +31,10 @@ mixin package-info()
 				.stat
 
 mixin package-stat()
-	section.package-stat
+	section.package-stat.card
 		.top
-			img.avatar(src="./img/avatar.jpg")
+			a
+				img.avatar(src="./img/avatar.jpg")
 			.txt spud updated 4 days ago
 		.bottom
 			.item 299
@@ -41,16 +42,20 @@ mixin package-stat()
 			.item Issues
 
 mixin maintainers()
-	section.maintainers
+	section.maintainers.card
 		.head MAINTAINERS
 		.body
-			img.avatar(src="./img/avatar.jpg")
-			img.avatar(src="./img/avatar.jpg")
-			img.avatar(src="./img/avatar.jpg")
-			img.avatar(src="./img/avatar.jpg")
+			a
+				img.avatar(src="./img/avatar.jpg")
+			a
+				img.avatar(src="./img/avatar.jpg")
+			a
+				img.avatar(src="./img/avatar.jpg")
+			a
+				img.avatar(src="./img/avatar.jpg")
 
 mixin command(title,content)
-	section.command
+	section.command.card
 		.title #{title}
 		.content 
 			.txt #{content}

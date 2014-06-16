@@ -19,69 +19,74 @@ body
 		.info
 			badge(green)
 	.detail
-		width:90%
+		margin-bottom:50px
+		center()
 		.row
 			clearfix()
-		center()
 		.package-stat
 			package-stat(48%)
-			margin:1%
 			float:left
-
-		.maintainers
-			maintainers(48%)
-			float:left
-			margin:1%
-
 		.command
 			command(48%)
 			float:left
-			margin:1%
 
-
-		.tabs
+		.dependency-info
 			width:48%
-			margin:1%
-			height:70px
-			clearfix()
 			float:left
-			.tab
-				font-size:14px
-				float:left
-				background-color:#eae9e9
-				color:#acb3bf
-				line-height:70px
-				padding:0px 30px	
-				border-right:1px solid #e5e4e4
-				&:last-child
-					border-right:none
-				&:hover
+			box-shadow:card_shadow
+			.tabs
+				height:70px
+				clearfix()
+				.tab
+					font-size:14px
+					float:left
+					background-color:#eae9e9
+					color:#acb3bf
+					line-height:70px
+					padding:0px 25px	
+					border-right:1px solid #e5e4e4
+					&:last-child
+						border-right:none
+					&:hover
+						background-color:#ffffff
+				.active
 					background-color:#ffffff
-			.active
+			.content
+				height:200px
 				background-color:#ffffff
-
+				table
+					width:100%
+		.maintainers
+			maintainers(48%)
+			float:left
+			height:270px
+			.body
+				height:200px
 		.readme
 			readme(98%)
-			margin:1%
 			float:left
 
 
-@media (min-width: 0px )
-	.package-info
-		package-info(96%)
-		margin:2%
-		float:left
+@media (min-width: 0px)
+	.container
+		.detail
+			width:100%
+			.card
+				width:100%
+				margin:2% 0%
+			.readme
+				width:100%
+				margin:2% 0%
 
-@media (min-width: 800px)
-	.package-info
-		package-info(47%)
-		margin:1.5%
-		float:left
+@media (min-width: 850px)
+	.container
+		.detail
+			width:95%
+			.card
+				width:48%
+				margin:1%
+			.readme
+				width:98%
+				margin:1%
 
-
-@media (min-width: 1100px)
-	.package-info
-		package-info(31.3%)
-		margin:1%
-		float:left
 	

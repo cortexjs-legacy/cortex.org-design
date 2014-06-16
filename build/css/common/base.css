@@ -3,6 +3,9 @@ body {
   font-weight: 100;
   letter-spacing: 1px;
 }
+a {
+  cursor: pointer;
+}
 table {
   background-color: #fff;
   padding: 0px;
@@ -29,12 +32,25 @@ table tr td {
   color: #777;
   padding: 0px 20px;
 }
+.color-red {
+  color: #f00;
+}
+.color-blue {
+  color: #00f;
+}
+.color-yello {
+  color: yello;
+}
+.color-green {
+  color: #008000;
+}
 .nav {
   height: nav_height;
   box-shadow: nav_shadow;
   background-color: #e6e6e7;
 }
 .nav .home {
+  margin-left: 5px;
   float: left;
   width: nav_height;
   height: nav_height;
@@ -51,7 +67,7 @@ table tr td {
 .nav .panel .search-box {
   position: relative;
   float: left;
-  padding: 10px 20px;
+  padding: 10px 20px 10px 0px;
 }
 .nav .panel .search-box input[type=text] {
   height: 40px;
@@ -70,7 +86,7 @@ table tr td {
   width: 26px;
   height: 26px;
   top: 17px;
-  left: 28px;
+  left: 8px;
 }
 .nav .panel .search-box .icon-close {
   position: absolute;
@@ -88,10 +104,8 @@ table tr td {
   border-left: 1px solid #02050c;
   width: nav_height;
   float: left;
-  cursor: pointer;
 }
 .nav .panel .util-panel .get-started {
-  cursor: pointer;
   border-left: 1px solid #02050c;
   line-height: nav_height;
   padding: 0px 24px;
@@ -101,7 +115,6 @@ table tr td {
   background-color: #008000;
 }
 .nav .panel .util-panel .user {
-  cursor: pointer;
   border-left: 1px solid #02050c;
   float: left;
   height: nav_height;

@@ -110,6 +110,9 @@ body {
   font-weight: 100;
   letter-spacing: 1px;
 }
+a {
+  cursor: pointer;
+}
 table {
   background-color: #fff;
   padding: 0px;
@@ -401,7 +404,6 @@ section {
   float: right;
   width: 50px;
   height: 100%;
-  background-color: #222;
 }
 .package-stat {
   width: 400px;
@@ -451,6 +453,7 @@ section {
   background-color: #f0f1f5;
 }
 .maintainers .body .avatar {
+  cursor: pointer;
   width: 50px;
   height: 50px;
   -webkit-border-radius: 50%;

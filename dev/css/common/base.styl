@@ -12,6 +12,8 @@ body
 	font-family: "Helvetica Neue", arial, sans-serif
 	font-weight:100
 	letter-spacing:1px
+a
+	cursor:pointer
 
 table
 	background-color:#ffffff
@@ -34,11 +36,24 @@ table
 			color:#777777
 			padding:0px 20px
 
+.color-red
+	color:red
+
+.color-blue
+	color:blue
+
+.color-yello
+	color:yello
+
+.color-green
+	color:green
+
 .nav
 	height:nav_height
 	box-shadow:nav_shadow 
 	background-color:#e6e6e7
 	.home
+		margin-left:5px
 		float:left
 		width:nav_height
 		height:nav_height
@@ -52,7 +67,7 @@ table
 		.search-box
 			position:relative
 			float:left
-			padding:10px 20px
+			padding:10px 20px 10px 0px
 			input[type=text] 
 				height:40px
 				background-color:#ffffff
@@ -69,7 +84,7 @@ table
 				width:26px
 				height:26px
 				top:17px
-				left:28px
+				left:8px
 			.icon-close
 				position: absolute
 				image:'../img/icon-close.png'
@@ -84,9 +99,7 @@ table
 				border-left:1px solid #02050c
 				width:nav_height
 				float:left
-				cursor:pointer
 			.get-started
-				cursor:pointer
 				border-left:1px solid #02050c
 				line-height:nav_height
 				padding:0px 24px
@@ -95,7 +108,6 @@ table
 				float:left
 				background-color:green
 			.user
-				cursor:pointer
 				border-left:1px solid #02050c
 				float:left
 				height:nav_height
