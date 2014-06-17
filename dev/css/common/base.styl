@@ -10,6 +10,7 @@ nav_bg = rgba(255,255,255,.9)
 
 card_shadow = 0 2px 2px rgba(0, 0, 0, .2)
 
+font_family = "Helvetica Neue", arial, sans-serif
 
 * 
 	box-sizing:border-box
@@ -17,7 +18,7 @@ card_shadow = 0 2px 2px rgba(0, 0, 0, .2)
 
 
 body
-	font-family: "Helvetica Neue", arial, sans-serif
+	font-family: font_family
 	font-weight:100
 	letter-spacing:1px
 	image:"../img/bg.png"
@@ -25,11 +26,42 @@ a
 	cursor:pointer
 
 input
+	appearance:none
 	outline:none
+
+select
+	font-family: font_family
+	position:relative
+	outline:none
+	appearance:none
+	border:none
+	height:30px
+	line-height:30px
+	font-size:16px
+	border-radius:0px
+	padding:0px 26px 0px 12px	
+	color:#bac0cb	
+	background : #ffffff no-repeat right 8px center
+	image:"../img/arrow.png"
+	letter-spacing:2px
+	box-shadow:card_shadow
+	font-weight:100
+
+.info-box
+	display:inline-block
+	height:30px
+	line-height:30px
+	font-size:16px
+	padding:0px 12px
+	background-color:#ffffff
+	color:#bac0cb
+	letter-spacing:2px
+	box-shadow:card_shadow
 
 table
 	background-color:#ffffff
 	padding 0px
+	font-size:14px
 	tr
 		height:40px
 		&:nth-child(odd)
@@ -41,9 +73,8 @@ table
 			border-bottom:1px solid #d0d7dd
 			color:#919bad
 			padding:0px 20px
-			font-size:14px
 		td
-			font-size:12px
+			font-weight:300
 			border-bottom:1px solid #d0d7dd
 			color:#777777
 			padding:0px 20px
@@ -62,6 +93,27 @@ table
 
 .hide
 	display:none
+
+$icon
+	position:absolute
+	content:""
+	width:26px
+	height:26px
+
+.icon-like
+	&:before
+		@extends $icon
+		image:"../img/icon-like.png"
+
+.icon-home
+	&:before
+		@extends $icon
+		image:"../img/icon-home.png"
+
+.icon-issue
+	&:before
+		@extends $icon
+		image:"../img/icon-issue.png"
 
 .nav
 	width:100%
@@ -199,9 +251,3 @@ table
 			padding-right:283px
 			.util-panel
 				display:block
-	
-
-
-
-
-

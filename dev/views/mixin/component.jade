@@ -37,9 +37,15 @@ mixin package-stat()
 				img.avatar(src="./img/avatar.jpg")
 			.txt spud updated 4 days ago
 		.bottom
-			.item 299
-			.item Repo
-			.item Issues
+			.item 
+				i(class="icon-like") 
+				span 299
+			.item
+				i(class="icon-home") 
+				span Repo
+			.item
+				i(class="icon-issue")
+				span Issues
 
 mixin maintainers()
 	section.maintainers.card
