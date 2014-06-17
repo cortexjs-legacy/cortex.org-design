@@ -6,16 +6,16 @@ html(ng-app="app")
 
 	body(ng-controller="Controller")
 		.nav
-			.mask
+			.bg
 			.overlay
-				a.home
-				.panel
+				.main-panel
+					a.home
 					.search-box
 						input(type="text")
 						i.icon-close
-					.util-panel
-						a.doc
-						a.get-started GET STARTED
-						a.user.login
-							img.avatar(src="./img/avatar.jpg")
+				.util-panel
+					a.doc
+					a.get-started GET STARTED
+					a.user.login
+						img.avatar(src="./img/avatar.jpg")
 		block content

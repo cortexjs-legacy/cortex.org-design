@@ -52,22 +52,28 @@ table tr td {
   display: none;
 }
 .nav {
+  width: 100%;
   height: nav_height;
   box-shadow: nav_shadow;
 }
-.nav .mask {
-  opacity: 0.9;
+.nav .bg {
   position: absolute;
-  height: nav_height;
   width: 100%;
+  height: nav_height;
+  z-index: 10;
 }
 .nav .overlay {
-  background-color: nav_bg;
   position: absolute;
-  height: nav_height;
   width: 100%;
+  height: nav_height;
+  z-index: 20;
+  padding-right: 283px;
 }
-.nav .overlay .home {
+.nav .overlay .main-panel {
+  background-color: nav_bg;
+  height: nav_height;
+}
+.nav .overlay .main-panel .home {
   margin-left: 5px;
   float: left;
   width: nav_height;
@@ -76,18 +82,15 @@ table tr td {
   cursor: pointer;
   image: '../img/logo.png';
 }
-.nav .overlay .home:hover {
+.nav .overlay .main-panel .home:hover {
   image: '../img/logo-hover.png';
 }
-.nav .overlay .panel {
-  float: right;
-}
-.nav .overlay .panel .search-box {
+.nav .overlay .main-panel .search-box {
   position: relative;
-  float: left;
+  float: right;
   padding: 10px 20px 10px 0px;
 }
-.nav .overlay .panel .search-box input[type=text] {
+.nav .overlay .main-panel .search-box input[type=text] {
   height: 40px;
   background-color: #fff;
   border: none;
@@ -97,7 +100,7 @@ table tr td {
   font-size: 18px;
   color: #a8a8a8;
 }
-.nav .overlay .panel .search-box:before {
+.nav .overlay .main-panel .search-box:before {
   content: "";
   position: absolute;
   image: '../img/icon-search.png';
@@ -106,7 +109,7 @@ table tr td {
   top: 17px;
   left: 8px;
 }
-.nav .overlay .panel .search-box .icon-close {
+.nav .overlay .main-panel .search-box .icon-close {
   position: absolute;
   image: '../img/icon-close.png';
   width: 26px;
@@ -114,46 +117,54 @@ table tr td {
   top: 17px;
   right: 28px;
 }
-.nav .overlay .panel .util-panel {
-  background-color: #02060e;
-  float: left;
+.nav .overlay .util-panel {
+  position: absolute;
+  right: 0px;
+  top: 0px;
 }
-.nav .overlay .panel .util-panel .doc {
+.nav .overlay .util-panel .doc {
   background-color: nav_bg;
   height: nav_height;
   margin-left: 1px;
   width: nav_height;
   float: left;
 }
-.nav .overlay .panel .util-panel .get-started {
+.nav .overlay .util-panel .get-started {
   margin-left: 1px;
   line-height: nav_height;
-  padding: 0px 24px;
+  text-align: center;
+  width: 160px;
   font-size: 16px;
   color: #fff;
   float: left;
   background-color: #008000;
 }
-.nav .overlay .panel .util-panel .user {
+.nav .overlay .util-panel .user {
   margin-left: 1px;
   float: left;
   height: nav_height;
   width: nav_height;
 }
-.nav .overlay .panel .util-panel .user img.avatar {
+.nav .overlay .util-panel .user img.avatar {
   width: 100%;
   height: 100%;
 }
-.nav .overlay .panel .util-panel .login {
+.nav .overlay .util-panel .login {
   background-color: #222;
 }
 @media (min-width: 0px) {
-  .nav .util-panel {
+  .nav .overlay {
+    padding-right: 0px;
+  }
+  .nav .overlay .util-panel {
     display: none;
   }
 }
 @media (min-width: 700px) {
-  .nav .util-panel {
+  .nav .overlay {
+    padding-right: 283px;
+  }
+  .nav .overlay .util-panel {
     display: block;
   }
 }

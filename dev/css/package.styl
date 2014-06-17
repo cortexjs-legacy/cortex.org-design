@@ -11,19 +11,22 @@ global-reset()
 			badge(green)
 	.detail
 		margin-bottom:50px
+		padding-top:10px
 		center()
+		.card
+			margin-bottom:26px
 		.row
 			clearfix()
 		.package-stat
-			package-stat(48%)
-			float:left
+			package-stat(100%)
 		.command
-			command(48%)
-			float:left
-
+			command(100%)
+		.maintainers
+			maintainers(100%)
+			.body
+				height:90px
 		.dependency-info
-			width:48%
-			float:left
+			width:100%
 			.tabs
 				height:70px
 				clearfix()
@@ -42,42 +45,46 @@ global-reset()
 				.active
 					background-color:#ffffff
 			.content
-				height:200px
+				overflow:scroll
+				height:342px
 				background-color:#ffffff
 				box-shadow:card_shadow
 				table
 					width:100%
-		.maintainers
-			maintainers(48%)
-			float:left
-			height:270px
-			.body
-				height:200px
 		.readme
+			center()
 			readme(98%)
-			float:left
 
 
 @media (min-width: 0px)
+	.row
+		padding:0 0%
+	.col
+		float:none
+		width:100%
+	.card 
+		width:100%
 	.container
 		.detail
 			width:100%
-			.card
-				width:100%
-				margin:2% 0%
 			.readme
 				width:100%
-				margin:2% 0%
+				margin:0
 
-@media (min-width: 850px)
+@media (min-width: 860px)
+	.row
+		padding:0 1%
+	.col
+		float:left
+		width:48%
+		margin:0% 1%
 	.container
 		.detail
 			width:95%
-			.card
-				width:48%
-				margin:1%
 			.readme
 				width:98%
-				margin:1%
+				center()
+
+
 
 	

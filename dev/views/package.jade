@@ -12,36 +12,49 @@ block content
 			span.info 10 pacakges about commonjs
 		.detail
 			.row
-				+package-stat
-				+command("clone","git clone blablabla")
-				+command("install","npm install commonjs-walker --save")
+				.col
+					+package-stat
+					+command("install","npm install commonjs-walker --save")
+					+maintainers()
+				.col
+					.dependency-info.card
+						.tabs
+							a.tab.active DEPENDENCIES
+							a.tab DEV
+							a.tab DEPENDENTS
+						.content
+							table
+								tr
+									th FULL NAME
+									th REQUIREMENT
+									th LATEST
+								tr
+									td async
+									td ~0.2.9
+									td 1.2.0
+								tr
+									td async
+									td ~0.2.9
+									td 1.2.0
+								tr
+									td async
+									td ~0.2.9
+									td 1.2.0
+								tr
+									td async
+									td ~0.2.9
+									td 1.2.0
+								tr
+									td async
+									td ~0.2.9
+									td 1.2.0
+								tr
+									td async
+									td ~0.2.9
+									td 1.2.0
+								
 			.row
-				.dependency-info.card
-					.tabs
-						a.tab.active DEPENDENCIES
-						a.tab DEV
-						a.tab DEPENDENTS
-					.content
-						table
-							tr
-								th FULL NAME
-								th REQUIREMENT
-								th LATEST
-							tr
-								td async
-								td ~0.2.9
-								td 1.2.0
-							tr
-								td async
-								td ~0.2.9
-								td 1.2.0
-							tr
-								td async
-								td ~0.2.9
-								td 1.2.0
-				+maintainers()
-			.row
-				section.readme
+				section.readme.card
 					.title README
 					.content hahaha
 
