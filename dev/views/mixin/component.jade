@@ -2,7 +2,7 @@ mixin user()
 	section.user.card
 		img.avatar(src="./img/avatar.jpg")
 		.username substack
-		.packages 400 packages
+		.user-packages 400 packages
 
 mixin user-info()
 	section.user-info.card
@@ -22,6 +22,16 @@ mixin user-info()
 mixin package-info()
 	a.package-info.card
 		img.avatar(src="./img/avatar.jpg")
+		.content
+			.top
+				.package-name commonjs-walker
+				.version 2.3.0
+			.bottom
+				p.description bla bla bla blabl abl ablab labla blabl 
+				.stat
+
+mixin package-info-no-avatar()
+	a.package-info.card
 		.content
 			.top
 				.package-name commonjs-walker

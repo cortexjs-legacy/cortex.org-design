@@ -442,18 +442,46 @@ table tr td {
     display: block;
   }
 }
-.container .top-area {
-  height: 90px;
-  padding: 30px 0px;
+.container .user-area .user-info,
+.user-area .user-info,
+.user-info {
+  background-color: #fff;
 }
-.container .top-area .info {
-  display: inline-block;
-  height: 50px;
-  line-height: 50px;
-  background-color: #e87b5e;
-  color: #fff;
-  font-size: 16px;
+.container .user-area .user-info .head,
+.user-area .user-info .head,
+.user-info .head {
+  height: 70px;
+  line-height: 70px;
   padding: 0px 20px;
+  color: #dcdfe5;
+  border-bottom: 1px solid #d0d7dd;
+}
+.container .user-area .user-info .body,
+.user-area .user-info .body,
+.user-info .body {
+  background-color: #fff;
+}
+.container {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container .user-area {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  zoom: 1;
+}
+.container .user-area:before,
+.container .user-area:after {
+  content: "";
+  display: table;
+}
+.container .user-area:after {
+  clear: both;
+}
+.container .user-area .card {
+  float: left;
 }
 .container .packages {
   margin-left: auto;
@@ -473,10 +501,57 @@ table tr td {
   float: left;
 }
 @media (min-width: 0px) {
-  .packages {
+  .container {
     width: 100%;
   }
-  .packages .package-info {
+  .container .user-area .user {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-color: #fff;
+    text-align: center;
+    padding-top: 40px;
+    -webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  }
+  .container .user-area .user img.avatar {
+    width: 150px;
+    height: 150px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+  }
+  .container .user-area .user .username {
+    margin-top: 25px;
+    width: 100%;
+    font-size: 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container .user-area .user .user-packages {
+    position: absolute;
+    right: 0px;
+    bottom: 30px;
+    height: 30px;
+    padding: 0px 10px;
+    line-height: 30px;
+    font-size: 12px;
+    background-color: #e98065;
+    color: #fff;
+  }
+  .container .user-area .user-info {
+    width: 100%;
+    height: 350px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  }
+  .container .user-area .user-info .body table {
+    width: 100%;
+  }
+  .container .user-area .card {
+    margin: 2% 0%;
+  }
+  .container .packages .package-info {
     width: 100%;
     height: 100px;
     background-color: #fff;
@@ -487,36 +562,36 @@ table tr td {
     margin: 2% 0%;
     float: left;
   }
-  .packages .package-info:before,
-  .packages .package-info:after {
+  .container .packages .package-info:before,
+  .container .packages .package-info:after {
     content: "";
     display: table;
   }
-  .packages .package-info:after {
+  .container .packages .package-info:after {
     clear: both;
   }
-  .packages .package-info img.avatar {
+  .container .packages .package-info img.avatar {
     float: left;
     width: 100px;
     height: 100px;
   }
-  .packages .package-info .content {
+  .container .packages .package-info .content {
     float: left;
   }
-  .packages .package-info .content .top {
+  .container .packages .package-info .content .top {
     height: 50%;
     zoom: 1;
     line-height: 50px;
   }
-  .packages .package-info .content .top:before,
-  .packages .package-info .content .top:after {
+  .container .packages .package-info .content .top:before,
+  .container .packages .package-info .content .top:after {
     content: "";
     display: table;
   }
-  .packages .package-info .content .top:after {
+  .container .packages .package-info .content .top:after {
     clear: both;
   }
-  .packages .package-info .content .top .package-name {
+  .container .packages .package-info .content .top .package-name {
     display: inline;
     padding: 0px 15px;
     font-size: 18px;
@@ -527,7 +602,7 @@ table tr td {
     white-space: nowrap;
     width: 80%;
   }
-  .packages .package-info .content .top .version {
+  .container .packages .package-info .content .top .version {
     font-weight: 300;
     width: 20%;
     float: right;
@@ -536,11 +611,11 @@ table tr td {
     font-size: 17px;
     padding-right: 20px;
   }
-  .packages .package-info .content .bottom {
+  .container .packages .package-info .content .bottom {
     color: #c6c6c6;
     height: 50%;
   }
-  .packages .package-info .content .bottom .description {
+  .container .packages .package-info .content .bottom .description {
     display: block;
     padding-left: 15px;
     float: left;
@@ -551,57 +626,107 @@ table tr td {
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
   }
-  .packages .package-info .content .bottom .stat {
+  .container .packages .package-info .content .bottom .stat {
     float: right;
     width: 50px;
     height: 100%;
   }
+  .container .packages .package-info .content {
+    width: 100%;
+  }
 }
 @media (min-width: 700px) {
-  .packages {
+  .container {
     width: 95%;
   }
-  .packages .package-info {
-    width: 47%;
+  .container .user-area .user {
+    position: relative;
+    width: 48%;
+    height: 350px;
+    background-color: #fff;
+    text-align: center;
+    padding-top: 40px;
+    -webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  }
+  .container .user-area .user img.avatar {
+    width: 150px;
+    height: 150px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+  }
+  .container .user-area .user .username {
+    margin-top: 25px;
+    width: 100%;
+    font-size: 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container .user-area .user .user-packages {
+    position: absolute;
+    right: 0px;
+    bottom: 30px;
+    height: 30px;
+    padding: 0px 10px;
+    line-height: 30px;
+    font-size: 12px;
+    background-color: #e98065;
+    color: #fff;
+  }
+  .container .user-area .user-info {
+    width: 48%;
+    height: 350px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  }
+  .container .user-area .user-info .body table {
+    width: 100%;
+  }
+  .container .user-area .card {
+    margin: 1%;
+  }
+  .container .packages .package-info {
+    width: 48%;
     height: 100px;
     background-color: #fff;
     -webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.2);
     box-shadow: 0 2px 2px rgba(0,0,0,0.2);
     cursor: pointer;
     zoom: 1;
-    margin: 1.5%;
+    margin: 1%;
     float: left;
   }
-  .packages .package-info:before,
-  .packages .package-info:after {
+  .container .packages .package-info:before,
+  .container .packages .package-info:after {
     content: "";
     display: table;
   }
-  .packages .package-info:after {
+  .container .packages .package-info:after {
     clear: both;
   }
-  .packages .package-info img.avatar {
+  .container .packages .package-info img.avatar {
     float: left;
     width: 100px;
     height: 100px;
   }
-  .packages .package-info .content {
+  .container .packages .package-info .content {
     float: left;
   }
-  .packages .package-info .content .top {
+  .container .packages .package-info .content .top {
     height: 50%;
     zoom: 1;
     line-height: 50px;
   }
-  .packages .package-info .content .top:before,
-  .packages .package-info .content .top:after {
+  .container .packages .package-info .content .top:before,
+  .container .packages .package-info .content .top:after {
     content: "";
     display: table;
   }
-  .packages .package-info .content .top:after {
+  .container .packages .package-info .content .top:after {
     clear: both;
   }
-  .packages .package-info .content .top .package-name {
+  .container .packages .package-info .content .top .package-name {
     display: inline;
     padding: 0px 15px;
     font-size: 18px;
@@ -612,7 +737,7 @@ table tr td {
     white-space: nowrap;
     width: 80%;
   }
-  .packages .package-info .content .top .version {
+  .container .packages .package-info .content .top .version {
     font-weight: 300;
     width: 20%;
     float: right;
@@ -621,11 +746,11 @@ table tr td {
     font-size: 17px;
     padding-right: 20px;
   }
-  .packages .package-info .content .bottom {
+  .container .packages .package-info .content .bottom {
     color: #c6c6c6;
     height: 50%;
   }
-  .packages .package-info .content .bottom .description {
+  .container .packages .package-info .content .bottom .description {
     display: block;
     padding-left: 15px;
     float: left;
@@ -636,17 +761,17 @@ table tr td {
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
   }
-  .packages .package-info .content .bottom .stat {
+  .container .packages .package-info .content .bottom .stat {
     float: right;
     width: 50px;
     height: 100%;
   }
 }
 @media (min-width: 1100px) {
-  .packages {
+  .container {
     width: 95%;
   }
-  .packages .package-info {
+  .container .packages .package-info {
     width: 31.3%;
     height: 100px;
     background-color: #fff;
@@ -657,36 +782,36 @@ table tr td {
     margin: 1%;
     float: left;
   }
-  .packages .package-info:before,
-  .packages .package-info:after {
+  .container .packages .package-info:before,
+  .container .packages .package-info:after {
     content: "";
     display: table;
   }
-  .packages .package-info:after {
+  .container .packages .package-info:after {
     clear: both;
   }
-  .packages .package-info img.avatar {
+  .container .packages .package-info img.avatar {
     float: left;
     width: 100px;
     height: 100px;
   }
-  .packages .package-info .content {
+  .container .packages .package-info .content {
     float: left;
   }
-  .packages .package-info .content .top {
+  .container .packages .package-info .content .top {
     height: 50%;
     zoom: 1;
     line-height: 50px;
   }
-  .packages .package-info .content .top:before,
-  .packages .package-info .content .top:after {
+  .container .packages .package-info .content .top:before,
+  .container .packages .package-info .content .top:after {
     content: "";
     display: table;
   }
-  .packages .package-info .content .top:after {
+  .container .packages .package-info .content .top:after {
     clear: both;
   }
-  .packages .package-info .content .top .package-name {
+  .container .packages .package-info .content .top .package-name {
     display: inline;
     padding: 0px 15px;
     font-size: 18px;
@@ -697,7 +822,7 @@ table tr td {
     white-space: nowrap;
     width: 80%;
   }
-  .packages .package-info .content .top .version {
+  .container .packages .package-info .content .top .version {
     font-weight: 300;
     width: 20%;
     float: right;
@@ -706,11 +831,11 @@ table tr td {
     font-size: 17px;
     padding-right: 20px;
   }
-  .packages .package-info .content .bottom {
+  .container .packages .package-info .content .bottom {
     color: #c6c6c6;
     height: 50%;
   }
-  .packages .package-info .content .bottom .description {
+  .container .packages .package-info .content .bottom .description {
     display: block;
     padding-left: 15px;
     float: left;
@@ -721,7 +846,7 @@ table tr td {
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
   }
-  .packages .package-info .content .bottom .stat {
+  .container .packages .package-info .content .bottom .stat {
     float: right;
     width: 50px;
     height: 100%;
