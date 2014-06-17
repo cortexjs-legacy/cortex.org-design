@@ -1,16 +1,7 @@
 global-reset()
+
 @import "common/*"
 @import "mixins/*"
-
-* 
-	box-sizing:border-box
-
-html body
-	height:auto
-
-body
-	background-color:#e3e2e2
-
 
 .container
 	.top-area
@@ -33,7 +24,6 @@ body
 		.dependency-info
 			width:48%
 			float:left
-			box-shadow:card_shadow
 			.tabs
 				height:70px
 				clearfix()
@@ -54,6 +44,7 @@ body
 			.content
 				height:200px
 				background-color:#ffffff
+				box-shadow:card_shadow
 				table
 					width:100%
 		.maintainers

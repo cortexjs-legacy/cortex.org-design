@@ -1,7 +1,11 @@
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: "Helvetica Neue", arial, sans-serif;
   font-weight: 100;
   letter-spacing: 1px;
+  image: "../img/bg.png";
 }
 a {
   cursor: pointer;
@@ -44,12 +48,26 @@ table tr td {
 .color-green {
   color: #008000;
 }
+.hide {
+  display: none;
+}
 .nav {
   height: nav_height;
   box-shadow: nav_shadow;
-  background-color: #e6e6e7;
 }
-.nav .home {
+.nav .mask {
+  opacity: 0.9;
+  position: absolute;
+  height: nav_height;
+  width: 100%;
+}
+.nav .overlay {
+  background-color: nav_bg;
+  position: absolute;
+  height: nav_height;
+  width: 100%;
+}
+.nav .overlay .home {
   margin-left: 5px;
   float: left;
   width: nav_height;
@@ -58,18 +76,18 @@ table tr td {
   cursor: pointer;
   image: '../img/logo.png';
 }
-.nav .home:hover {
+.nav .overlay .home:hover {
   image: '../img/logo-hover.png';
 }
-.nav .panel {
+.nav .overlay .panel {
   float: right;
 }
-.nav .panel .search-box {
+.nav .overlay .panel .search-box {
   position: relative;
   float: left;
   padding: 10px 20px 10px 0px;
 }
-.nav .panel .search-box input[type=text] {
+.nav .overlay .panel .search-box input[type=text] {
   height: 40px;
   background-color: #fff;
   border: none;
@@ -79,7 +97,7 @@ table tr td {
   font-size: 18px;
   color: #a8a8a8;
 }
-.nav .panel .search-box:before {
+.nav .overlay .panel .search-box:before {
   content: "";
   position: absolute;
   image: '../img/icon-search.png';
@@ -88,7 +106,7 @@ table tr td {
   top: 17px;
   left: 8px;
 }
-.nav .panel .search-box .icon-close {
+.nav .overlay .panel .search-box .icon-close {
   position: absolute;
   image: '../img/icon-close.png';
   width: 26px;
@@ -96,17 +114,19 @@ table tr td {
   top: 17px;
   right: 28px;
 }
-.nav .panel .util-panel {
+.nav .overlay .panel .util-panel {
+  background-color: #02060e;
   float: left;
 }
-.nav .panel .util-panel .doc {
+.nav .overlay .panel .util-panel .doc {
+  background-color: nav_bg;
   height: nav_height;
-  border-left: 1px solid #02050c;
+  margin-left: 1px;
   width: nav_height;
   float: left;
 }
-.nav .panel .util-panel .get-started {
-  border-left: 1px solid #02050c;
+.nav .overlay .panel .util-panel .get-started {
+  margin-left: 1px;
   line-height: nav_height;
   padding: 0px 24px;
   font-size: 16px;
@@ -114,17 +134,17 @@ table tr td {
   float: left;
   background-color: #008000;
 }
-.nav .panel .util-panel .user {
-  border-left: 1px solid #02050c;
+.nav .overlay .panel .util-panel .user {
+  margin-left: 1px;
   float: left;
   height: nav_height;
   width: nav_height;
 }
-.nav .panel .util-panel .user img.avatar {
+.nav .overlay .panel .util-panel .user img.avatar {
   width: 100%;
   height: 100%;
 }
-.nav .panel .util-panel .login {
+.nav .overlay .panel .util-panel .login {
   background-color: #222;
 }
 @media (min-width: 0px) {

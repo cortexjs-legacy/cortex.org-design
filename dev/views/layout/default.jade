@@ -5,4 +5,17 @@ html(ng-app="app")
 		block head
 
 	body(ng-controller="Controller")
+		.nav
+			.mask
+			.overlay
+				a.home
+				.panel
+					.search-box
+						input(type="text")
+						i.icon-close
+					.util-panel
+						a.doc
+						a.get-started GET STARTED
+						a.user.login
+							img.avatar(src="./img/avatar.jpg")
 		block content
