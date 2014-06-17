@@ -10,6 +10,9 @@ body {
 a {
   cursor: pointer;
 }
+input {
+  outline: none;
+}
 table {
   background-color: #fff;
   padding: 0px;
@@ -55,6 +58,8 @@ table tr td {
   width: 100%;
   height: nav_height;
   box-shadow: nav_shadow;
+  position: relative;
+  z-index: 100;
 }
 .nav .bg {
   position: absolute;
@@ -129,6 +134,15 @@ table tr td {
   width: nav_height;
   float: left;
 }
+.nav .overlay .util-panel .doc:before {
+  content: "";
+  image: "../img/doc.png";
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 18px;
+  left: 18px;
+}
 .nav .overlay .util-panel .get-started {
   margin-left: 1px;
   line-height: nav_height;
@@ -141,7 +155,7 @@ table tr td {
 }
 .nav .overlay .util-panel .user {
   margin-left: 1px;
-  float: left;
+  float: right;
   height: nav_height;
   width: nav_height;
 }
@@ -150,7 +164,36 @@ table tr td {
   height: 100%;
 }
 .nav .overlay .util-panel .login {
+  margin-left: 1px;
+  float: right;
+  height: nav_height;
+  width: nav_height;
   background-color: #222;
+}
+.nav .dropdown {
+  position: absolute;
+  right: 0px;
+  top: nav_height;
+  color: #646464;
+  padding: 5px;
+}
+.nav .dropdown a {
+  float: right;
+  position: relative;
+  display: block;
+  box-sizing: content-box;
+  font-size: 13px;
+  font-weight: 300;
+  width: 150px;
+  line-height: 40px;
+  padding: 0px 20px;
+  margin-bottom: 5px;
+  background-color: #313131;
+  height: 40px;
+}
+.nav .dropdown a:hover {
+  border-left: 5px solid #008000;
+  background-color: #232323;
 }
 @media (min-width: 0px) {
   .nav .overlay {
